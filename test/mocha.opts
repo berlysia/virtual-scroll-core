@@ -1,0 +1,1 @@
+--reporter dot --compilers js:babel-register

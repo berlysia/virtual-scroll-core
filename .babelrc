@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "es2015",
+    "react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "transform-class-properties"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "power-assert"
+      ],
+      "plugins": [
+        "auto-import-assert"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "unassert"
+      ]
+    }
+  }
+}
