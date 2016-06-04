@@ -1,6 +1,9 @@
 import {calcOffsetTop} from './util';
 import HeightManager from './HeightManager';
 
+/**
+ * @private
+ */
 export default class ContentBox {
     constructor(el, props) {
         this.el = el;

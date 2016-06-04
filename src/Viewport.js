@@ -1,12 +1,14 @@
 import {calcOffsetTop} from './util';
 
 /**
+ * @private
  * @typedef {Object} SizeObject
  * @property {number} top - offsetTop
  * @property {number} height - clientHeight
  */
 
 /**
+ * @private
  * size manager for Viewport
  */
 export default class Viewport {

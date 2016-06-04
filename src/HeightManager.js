@@ -2,6 +2,7 @@ import MapLike from 'map-like';
 import BinaryIndexedTree from 'binary-indexed-tree';
 
 /**
+ * @private
  * height cache wrapper object
  */
 export default class HeightManager {

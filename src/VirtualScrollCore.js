@@ -2,27 +2,9 @@ import Viewport from './Viewport';
 import ContentBox from './ContentBox';
 import {isArray, isFunction, isMapLike, isStateChanged} from './util';
 
-/**
- * @external {MapLike} https://github.com/azu/map-like
- */
 
 /**
- * @typedef {Object} ViewportElement
- * @property {number} [clientHeight] - or innerHeight
- * @property {number} [innerHeight] - or clientHeight
- * @property {number} [scrollY] - or pageYOffset
- * @property {number} [pageYOffset] - or scrollY
- * @property {number} offsetTop
- * @property {number} offsetParent
- */
-
-/**
- * @typedef {Object} ContentBoxElement
- * @property {number} offsetTop
- * @property {number} offsetParent
- */
-
-/**
+ * @public
  * @typedef {Object} CoreOptions
  * @property {Array<*>} items
  * @property {number} bufferSize
@@ -32,6 +14,7 @@ import {isArray, isFunction, isMapLike, isStateChanged} from './util';
  */
 
 /**
+ * @public
  * @typedef {Object} CoreState
  * @property {Array<*>} items
  * @property {number} contentHeight
@@ -42,45 +25,14 @@ import {isArray, isFunction, isMapLike, isStateChanged} from './util';
  * @property {number} visibleLastIdx
  */
 
-
-function identity(x) {return x;}
-
-function patchProps(props) {
-    if(!props) {
-        throw new Error('3rd argument "props" is required.');
-    }
-    
-    const validated = {};
-    if(!isArray(props.items)) {
-        throw new Error('3rd argument "props" must have "items", and "props.items" should be an Array.');
-    }
-    validated.items = props.items;
-
-    validated.bufferSize = props.bufferSize || 0;
-
-    if(props.assumedHeight == null || props.assumedHeight <= 0) {
-        throw new Error('3rd argument "props" must have "assumedHeight", and "props.assumedHeight" should be an positive number.')
-    }
-    validated.assumedHeight = props.assumedHeight;
-
-    validated.itemToCacheKey = 
-        (isFunction(props.itemToCacheKey))
-            ? props.itemToCacheKey
-            : identity;
-
-    validated.heightCache = 
-        (isMapLike(props.heightCache))
-            ? props.heightCache
-            : new MapLike();
-
-    return validated;
-}
-
 /**
+ * @public
  * Core state for Virtual Scroll.
  */
 export default class VirtualScrollCore {
+
     /**
+     * @public
      * @param {ViewportElement} viewportEl - scrolling container element (that is *window* in basic case)
      * @param {ContentBoxElement} contentEl - items container element
      * @param {CoreOptions} props - other properties
@@ -109,6 +61,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * Update height from outer object (ex. in onLoad handler)
      * @param {*} item - value which is present in props.items
      * @param {number} val - new value for cache
@@ -119,6 +72,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * Recalculate visible items.
      * @return {CoreState} next visible items
      */
@@ -131,6 +85,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * Refresh cached values (except heightCache).
      */
     reset() {
@@ -139,6 +94,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @param {number} index - index of items
      * @return {number} offset - offsetY for specified item
      */
@@ -147,6 +103,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @param {number} index - index of items
      * @return {number} height - offsetHeight for specified item
      */
@@ -155,6 +112,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @param {number} offset - target offset
      * @return {number} index - index of first item which has offset larger than given one
      */
@@ -163,6 +121,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} contentHeight - height of all items
      */
     getContentHeight() {
@@ -170,6 +129,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} offsetTop - offset of items container
      */
     getOffsetTop() {
@@ -177,6 +137,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} visibleFirstIdx - index of visible first sliced item
      */
     getVisibleFirstIndex() {
@@ -184,6 +145,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} visibleLastIdx - index of visible last sliced item
      */
     getVisibleLastIndex() {
@@ -191,6 +153,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} firstIdx - index of first sliced item
      */
     getFirstIndex() {
@@ -198,6 +161,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} lastIdx - index of last sliced item
      */
     getLastIndex() {
@@ -205,6 +169,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {Array<*>} items
      */
     getItems() {
@@ -212,6 +177,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @param {number} [absTopOffset] - absolute top offset in items container element
      * @return {number} visibleHeight - clientHeight in container element
      */
@@ -221,6 +187,7 @@ export default class VirtualScrollCore {
     }
 
     /**
+     * @public
      * @return {number} offsetTop - offset of items container
      */
     getScrollTop() {
