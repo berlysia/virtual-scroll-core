@@ -1,6 +1,13 @@
 import Viewport from './Viewport';
 import ContentBox from './ContentBox';
-import {isArray, isFunction, isMapLike, isStateChanged} from './util';
+import {
+    isArray,
+    isFunction,
+    isMapLike,
+    isStateChanged,
+    identity,
+    patchProps
+} from './util';
 
 
 /**
