@@ -30,6 +30,12 @@ For bugs and feature requests, [please create an issue](https://github.com/berly
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+
+## Special Thanks
+
+Basic idea is derived from [mir3z/react-virtual-list](https://github.com/mir3z/react-virtual-list) (MIT License).
+
+
 ## License
 
 Copyright © 2016-present berlysia.
