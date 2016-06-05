@@ -93,11 +93,20 @@ export default class VirtualScrollCore {
 
     /**
      * @public
-     * Refresh cached values (except heightCache).
+     * Refresh cached values (except height cache).
      */
     reset() {
         this.viewport.reset();
         this.contentBox.reset();
+    }
+
+
+    /**
+     * @public
+     * Refresh height cache
+     */
+    clearCache() {
+        this.contentBox.clearCache();
     }
 
     /**

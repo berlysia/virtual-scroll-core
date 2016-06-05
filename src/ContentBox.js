@@ -52,4 +52,8 @@ export default class ContentBox {
     reset() {
         this._size = null;
     }
+
+    clearCache() {
+        this.heightManager.reset();
+    }
 }

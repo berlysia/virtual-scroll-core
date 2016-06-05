@@ -23,6 +23,10 @@ export default class HeightManager {
         this._bit = BinaryIndexedTree.build(heights);
     }
 
+    reset() {
+        this.cache.clear();
+    }
+
     updateCache(item, val) {
         const key = this.itemToCacheKey(item);
         if(!this.keyToIdxMap.has(key)) return false;
