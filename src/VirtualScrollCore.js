@@ -13,23 +13,23 @@ import {
 /**
  * @public
  * @typedef {Object} CoreOptions
- * @property {Array<*>} items
- * @property {number} bufferSize
- * @property {number} assumedHeight
- * @property {Function} itemToCacheKey
- * @property {MapLike} heightCache
+ * @property {Array<*>} items - original list items
+ * @property {number} bufferSize - number of outer items to be sliced
+ * @property {number} assumedHeight - default height for height-unknown items
+ * @property {Function} itemToCacheKey - use this if you like one-to-many correspondence between items and cached heights.
+ * @property {MapLike} heightCache - key-value cache
  */
 
 /**
  * @public
  * @typedef {Object} CoreState
- * @property {Array<*>} items
- * @property {number} contentHeight
- * @property {number} offsetTop
- * @property {number} firstIdx
- * @property {number} lastIdx
- * @property {number} visibleFirstIdx
- * @property {number} visibleLastIdx
+ * @property {Array<*>} items - sliced items (to be rendered)
+ * @property {number} contentHeight - assumed height of all items
+ * @property {number} offsetTop - first item should have this offsetTop
+ * @property {number} firstIdx - first sliced index
+ * @property {number} lastIdx - last sliced index
+ * @property {number} visibleFirstIdx - first visible index
+ * @property {number} visibleLastIdx - last visible index
  */
 
 /**
@@ -181,6 +181,22 @@ export default class VirtualScrollCore {
      */
     getItems() {
         return this._state.items;
+    }
+
+    /**
+     * @public
+     * @return {number} length of items
+     */
+    getItemsLength() {
+        return this._state.items.length;
+    }
+
+    /**
+     * @public
+     * @return {number} last index of items
+     */
+    getItemsLastIndex() {
+        return this._state.items.length - 1;
     }
 
     /**
