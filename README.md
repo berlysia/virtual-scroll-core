@@ -14,6 +14,16 @@ WIP
 
 ## API
 
+### CoreOptions
+
+**Properties**
+
+-   `items` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Any>** original list items
+-   `bufferSize` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of outer items to be sliced
+-   `assumedHeight` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** default height for height-unknown items
+-   `itemToCacheKey` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** use this if you like one-to-many correspondence between items and cached heights.
+-   `heightCache` **MapLike** key-value cache
+
 ### VirtualScrollCore
 
 #### constructor
@@ -38,6 +48,8 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 Returns **CoreState** next visible items
 
 #### reset
+
+#### clearCache
 
 #### getOffsetByIndex
 
@@ -122,16 +134,6 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 -   `lastIdx` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** last sliced index
 -   `visibleFirstIdx` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** first visible index
 -   `visibleLastIdx` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** last visible index
-
-### CoreOptions
-
-**Properties**
-
--   `items` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;Any>** original list items
--   `bufferSize` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** number of outer items to be sliced
--   `assumedHeight` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** default height for height-unknown items
--   `itemToCacheKey` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** use this if you like one-to-many correspondence between items and cached heights.
--   `heightCache` **MapLike** key-value cache
 
 ## Running tests
 

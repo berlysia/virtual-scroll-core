@@ -1,3 +1,13 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/berlysia/virtual-scroll-core/compare/v0.1.0...v0.1.1) (2016-06-05)
+
+
+### Features
+
+* **heightCache:** Implement clearCache.([63a6cb8](https://github.com/berlysia/virtual-scroll-core/commit/63a6cb8))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/berlysia/virtual-scroll-core/compare/v0.0.2...v0.1.0) (2016-06-05)
 
