@@ -1,6 +1,6 @@
 {
   "name": "virtual-scroll-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "height cacheable virtual scroll - core only",
   "main": "lib/index.js",
   "scripts": {
