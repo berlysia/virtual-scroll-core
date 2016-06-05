@@ -65,6 +65,7 @@ export default class VirtualScrollCore {
         this.updateCache = this.updateCache.bind(this);
         this.update = this.update.bind(this);
         this.reset = this.reset.bind(this);
+        this.clearCache = this.clearCache.bind(this);
     }
 
     /**
