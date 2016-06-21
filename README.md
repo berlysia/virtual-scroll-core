@@ -10,7 +10,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Sample
 
-- [berlysia/react-virtual-scroll](https://github.com/berlysia/react-virtual-scroll) - My sample implementation. [demo](http://berlysia.github.io/react-virtual-scroll/)
+-   [berlysia/react-virtual-scroll](https://github.com/berlysia/react-virtual-scroll) - My sample implementation. [demo](http://berlysia.github.io/react-virtual-scroll/)
 
 ## Usage
 

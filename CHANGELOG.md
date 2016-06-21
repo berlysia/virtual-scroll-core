@@ -4,7 +4,7 @@
 
 ### Features
 
-* **clearCache:** Bind clearCache.([c4d659f](https://github.com/berlysia/virtual-scroll-core/commit/c4d659f))
+* **clearCache:** Bind clearCache. ([c4d659f](https://github.com/berlysia/virtual-scroll-core/commit/c4d659f))
 
 
 
@@ -14,7 +14,7 @@
 
 ### Features
 
-* **heightCache:** Implement clearCache.([63a6cb8](https://github.com/berlysia/virtual-scroll-core/commit/63a6cb8))
+* **heightCache:** Implement clearCache. ([63a6cb8](https://github.com/berlysia/virtual-scroll-core/commit/63a6cb8))
 
 
 
@@ -24,12 +24,12 @@
 
 ### Bug Fixes
 
-* Fix broken import([891a9e2](https://github.com/berlysia/virtual-scroll-core/commit/891a9e2))
+* Fix broken import ([891a9e2](https://github.com/berlysia/virtual-scroll-core/commit/891a9e2))
 
 
 ### Features
 
-* **getItemsLastIndex, getItemsLength:** Implement some funcs.([4780c77](https://github.com/berlysia/virtual-scroll-core/commit/4780c77))
+* **getItemsLastIndex, getItemsLength:** Implement some funcs. ([4780c77](https://github.com/berlysia/virtual-scroll-core/commit/4780c77))
 
 
 
@@ -39,7 +39,7 @@
 
 ### Bug Fixes
 
-* **.babelrc:** Omit unused plugins([ea3fb98](https://github.com/berlysia/virtual-scroll-core/commit/ea3fb98))
+* **.babelrc:** Omit unused plugins ([ea3fb98](https://github.com/berlysia/virtual-scroll-core/commit/ea3fb98))
 
 
 
